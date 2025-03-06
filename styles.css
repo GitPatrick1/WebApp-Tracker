@@ -1,0 +1,240 @@
+/* Reset di base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Palette e font */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #0a0f2b; /* Azzurro scuro */
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* Navigazione */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(90deg, #0a0f2b, #010101); /* Dal blu scuro al quasi nero */
+}
+nav .logo img {
+  width: 50px;
+  height: 50px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+nav ul li a:hover {
+  color: #00c6ff;
+}
+
+/* Header Homepage */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+  background: url('airplane.png') no-repeat center;
+  background-size: 150px 150px;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 15, 43, 0.85);
+}
+.hero h1, .hero p, .cta-button {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  animation: fadeIn 2.5s ease-in-out;
+}
+.cta-button {
+  display: inline-block;
+  background: #00c6ff;
+  color: #010101;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+}
+.cta-button:hover {
+  background: #0088cc;
+  transform: scale(1.05);
+}
+
+/* Sezione Features (Homepage) */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background: linear-gradient(90deg, #010101, #0a0f2b);
+}
+.feature {
+  background: #0a0f2b;
+  padding: 20px;
+  border-radius: 8px;
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+}
+.feature:hover {
+  transform: translateY(-10px);
+  background: #010101;
+}
+.feature h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.feature p {
+  font-size: 16px;
+}
+
+/* Tracker Section (tracker.html) */
+.tracker-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #0a0f2b;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.tracker-section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+  animation: slideInDown 1.5s ease-out;
+}
+
+/* Form di ricerca volo */
+#flightForm {
+  display: flex;
+  margin-bottom: 20px;
+}
+#flightForm input[type="text"] {
+  flex: 1;
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #00c6ff;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  background: #010101;
+  color: #f0f0f0;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+#flightForm input[type="text"]:focus {
+  border-color: #0088cc;
+  box-shadow: 0 0 8px #00c6ff;
+  outline: none;
+}
+#flightForm button {
+  padding: 15px 25px;
+  font-size: 18px;
+  border: 2px solid #00c6ff;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  background: #00c6ff;
+  color: #010101;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+#flightForm button:hover {
+  background: #0088cc;
+  transform: scale(1.05);
+}
+#flightForm button:active {
+  transform: scale(0.95);
+}
+
+/* Output dei dati del volo */
+#output {
+  margin-top: 20px;
+}
+.flight-info {
+  background: #010101;
+  border: 2px solid #00c6ff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s, background 0.3s;
+  cursor: pointer;
+}
+.flight-info:hover {
+  transform: scale(1.02);
+  background: #0a0f2b;
+}
+.flight-info p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Pannello Mappa */
+.map-panel {
+  margin-top: 30px;
+  text-align: center;
+}
+.map-panel button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #00c6ff;
+  color: #010101;
+  border: 2px solid #00c6ff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.map-panel button:hover {
+  background: #0088cc;
+  transform: scale(1.05);
+}
+#mapContainer {
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+.hidden {
+  display: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(90deg, #0a0f2b, #010101);
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+/* Animazioni */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideInDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
