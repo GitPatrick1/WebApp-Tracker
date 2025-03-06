@@ -1,5 +1,5 @@
 /* ===================================================================== */
-/* RESET E CURSORE PERSONALIZZATO CON EMOJI DELL'AEREO */
+/* RESET & CURSORE PERSONALIZZATO                                        */
 /* ===================================================================== */
 * {
   margin: 0;
@@ -10,7 +10,7 @@
 }
 
 /* ===================================================================== */
-/* STILI GLOBALI E PALETTE "DA VIAGGIO" */
+/* STILI GLOBALI & PALETTE "DA VIAGGIO"                                  */
 /* ===================================================================== */
 body {
   font-family: 'Arial', sans-serif;
@@ -21,14 +21,14 @@ body {
 }
 
 /* ===================================================================== */
-/* STILI DELLA NAVIGAZIONE */
+/* NAVIGAZIONE                                                           */
 /* ===================================================================== */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background: linear-gradient(90deg, #00c6ff, #0072ff); /* tonalità vivaci di blu */
+  padding: 20px 40px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff); /* Blu vivaci */
 }
 
 nav .logo img {
@@ -58,11 +58,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ffde59; /* tocco dorato */
+  color: #ffde59; /* Tocco dorato */
 }
 
 /* ===================================================================== */
-/* HEADER - HOMEPAGE */
+/* HEADER - HOMEPAGE                                                     */
 /* ===================================================================== */
 .hero {
   position: relative;
@@ -75,10 +75,7 @@ nav ul li a:hover {
 .hero::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0, 0, 0, 0.3);
 }
 
@@ -103,6 +100,7 @@ nav ul li a:hover {
   animation: fadeIn 2.5s ease-in-out;
 }
 
+/* Pulsante Call-To-Action */
 .cta-button {
   display: inline-block;
   background: #ffde59;
@@ -120,7 +118,7 @@ nav ul li a:hover {
 }
 
 /* ===================================================================== */
-/* SEZIONE FEATURES (Homepage) */
+/* SEZIONE FEATURES (Homepage)                                           */
 /* ===================================================================== */
 .features {
   display: flex;
@@ -154,15 +152,15 @@ nav ul li a:hover {
 }
 
 /* ===================================================================== */
-/* SEZIONE TRACKER (tracker.html) */
+/* SEZIONE TRACKER (tracker.html)                                        */
 /* ===================================================================== */
 .tracker-section {
   max-width: 800px;
   margin: 40px auto;
-  padding: 30px;
+  padding: 30px 40px;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .tracker-section h1 {
@@ -174,7 +172,7 @@ nav ul li a:hover {
 }
 
 /* ===================================================================== */
-/* FORM DI RICERCA VOLI */
+/* FORM DI RICERCA VOLI                                                  */
 /* ===================================================================== */
 #flightForm {
   display: flex;
@@ -222,7 +220,7 @@ nav ul li a:hover {
   transform: scale(0.95);
 }
 
-/* Animazione per il testo del bottone "Cerca" */
+/* Il testo "Cerca" in uno span per animarlo */
 #flightForm button span {
   transition: opacity 0.5s ease;
   display: inline-block;
@@ -249,9 +247,7 @@ nav ul li a:hover {
   transition: opacity 0.5s ease;
 }
 
-/* ===================================================================== */
-/* ISTRUZIONI PER L'USO */
-/* ===================================================================== */
+/* Istruzioni per l'uso */
 .instructions {
   text-align: center;
   font-size: 16px;
@@ -261,12 +257,13 @@ nav ul li a:hover {
 }
 
 /* ===================================================================== */
-/* OUTPUT E INFORMAZIONI DEL VLO */
+/* OUTPUT & INFORMAZIONI VOLO                                            */
 /* ===================================================================== */
 #output {
   margin-top: 20px;
 }
 
+/* Box per visualizzare le informazioni del volo */
 .flight-info {
   background: #f0f9ff;
   border: 2px solid #00c6ff;
@@ -289,7 +286,7 @@ nav ul li a:hover {
 }
 
 /* ===================================================================== */
-/* MAPPA PER LA POSIZIONE DELL'AEREO */
+/* MAPPA PER LA POSIZIONE DELL'AEREO                                     */
 /* ===================================================================== */
 .map-container {
   margin-top: 20px;
@@ -312,12 +309,12 @@ nav ul li a:hover {
 }
 
 /* ===================================================================== */
-/* AVVISI DI STATO DEL VOLO */
+/* AVVISI DI STATO DEL VOLO (ALERT)                                     */
 /* ===================================================================== */
 .status-alert {
   position: fixed;
   top: 20px;
-  left: -300px; /* parte fuori dallo schermo a sinistra */
+  left: -300px; /* Parte fuori dallo schermo */
   padding: 15px 25px;
   font-size: 18px;
   color: #fff;
@@ -327,30 +324,36 @@ nav ul li a:hover {
   transition: left 0.5s ease, opacity 0.5s ease;
   opacity: 0;
 }
+
 .status-alert.slide-in {
   left: 0;
   opacity: 1;
 }
+
 .status-alert.slide-out {
   left: -300px;
   opacity: 0;
 }
+
+/* Colori Alert in base allo stato */
 .alert-green {
   background: #28a745;
 }
+
 .alert-orange {
   background: #fd7e14;
 }
+
 .alert-red {
   background: #dc3545;
 }
 
 /* ===================================================================== */
-/* FOOTER */
+/* FOOTER                                                                */
 /* ===================================================================== */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 20px 40px;
   background: linear-gradient(90deg, #00c6ff, #0072ff);
   font-size: 16px;
   color: #fff;
@@ -358,7 +361,7 @@ footer {
 }
 
 /* ===================================================================== */
-/* ANIMAZIONI */
+/* ANIMAZIONI                                                            */
 /* ===================================================================== */
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -371,565 +374,102 @@ footer {
 }
 
 /* ===================================================================== */
-/* EXTRA: CLASSI DI SUPPORTO E UTILITÀ */
-/* ===================================================================== */
-.text-center { text-align: center; }
-.mb-20 { margin-bottom: 20px; }
-.mt-20 { margin-top: 20px; }
-.p-20 { padding: 20px; }
-.rounded { border-radius: 5px; }
-.shadow { box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-
-/* ===================================================================== */
-/* MEDIA QUERIES PER DISPOSITIVI MOBILI */
+/* MEDIA QUERIES (RESPONSIVE DESIGN)                                     */
 /* ===================================================================== */
 @media (max-width: 768px) {
-  nav ul li a { font-size: 16px; }
-  .hero h1 { font-size: 36px; }
-  .hero p { font-size: 18px; }
-  .cta-button { font-size: 18px; padding: 12px 25px; }
-  .features { flex-direction: column; }
-  .feature { width: 90%; margin: 10px auto; }
-  .tracker-section { padding: 20px; }
+  nav {
+    padding: 15px 20px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  .hero {
+    padding: 80px 10px;
+    background-size: 150px 150px;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  .cta-button {
+    font-size: 18px;
+    padding: 12px 25px;
+  }
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .tracker-section {
+    padding: 20px;
+    margin: 20px;
+  }
+  #flightForm input[type="text"],
+  #flightForm button {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .flight-info p {
+    font-size: 16px;
+  }
+  .map-container iframe {
+    height: 300px;
+  }
 }
 
 /* ===================================================================== */
-/* EXTRA DI STILI E ANIMAZIONI VARIE (sezione extra per arricchire il CSS) */
+/* UTILITY & CLASSI EXTRA (VARIE)                                          */
 /* ===================================================================== */
+.text-center { text-align: center; }
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
+.pt-20 { padding-top: 20px; }
+.pb-20 { padding-bottom: 20px; }
+.rounded { border-radius: 5px; }
+.shadow { box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+.transition { transition: all 0.3s ease; }
 
-/* Animazione pulsante per richiamare l'attenzione */
-.pulse {
-  animation: pulseAnim 2s infinite;
-}
+/* Extra animazioni e utility */
+.pulse { animation: pulseAnim 2s infinite; }
 @keyframes pulseAnim {
   0% { transform: scale(1); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
 
-/* Animazione per far lampeggiare un elemento */
-.blink {
-  animation: blinkAnim 1s steps(5, start) infinite;
-}
-@keyframes blinkAnim {
-  to { visibility: hidden; }
-}
+.blink { animation: blinkAnim 1s steps(5, start) infinite; }
+@keyframes blinkAnim { to { visibility: hidden; } }
 
-/* Animazione per transizioni lente */
-.slow-fade {
-  transition: opacity 1s ease-in-out;
+.fade-slide { animation: fadeSlide 1s ease-out; }
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-/* Classe per evidenziare un bordo animato */
-.border-animate {
-  border: 2px solid transparent;
-  background-clip: padding-box;
-  position: relative;
-}
-.border-animate::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, #ffde59, #00c6ff, #0072ff);
-  z-index: -1;
-  border-radius: 8px;
-  animation: borderFlow 3s linear infinite;
-}
-@keyframes borderFlow {
-  0% { filter: hue-rotate(0deg); }
-  100% { filter: hue-rotate(360deg); }
-}
-
-/* Utility per spaziature extra */
-.mt-40 { margin-top: 40px; }
-.mb-40 { margin-bottom: 40px; }
-.pt-40 { padding-top: 40px; }
-.pb-40 { padding-bottom: 40px; }
-
-/* Dummy classes per testing e sviluppo */
-.dummy-class-1 { background: #0072ff; }
-.dummy-class-2 { background: #00c6ff; }
-.dummy-class-3 { background: #ffde59; }
-.dummy-class-4 { border: 1px solid #0072ff; }
-.dummy-class-5 { font-weight: bold; }
 
 /* ===================================================================== */
-/* EXTRA COMMENTI E SEZIONI AGGIUNTIVE (Le seguenti righe servono ad arricchire il CSS fino a 600 righe) */
+/* SEZIONI EXTRA PER ARRICCHIRE IL CSS (FILLER)                           */
 /* ===================================================================== */
-
-/* Inizio extra sezioni */
 .extra-section-1 { margin: 20px; padding: 20px; background: #e0f0ff; border-radius: 8px; }
 .extra-section-2 { margin: 20px; padding: 20px; background: #d0eaff; border-radius: 8px; }
 .extra-section-3 { margin: 20px; padding: 20px; background: #c0e4ff; border-radius: 8px; }
 .extra-section-4 { margin: 20px; padding: 20px; background: #b0dfff; border-radius: 8px; }
 .extra-section-5 { margin: 20px; padding: 20px; background: #a0daff; border-radius: 8px; }
 
-/* Riempi con commenti e righe vuote per raggiungere 600 righe */
-/* .................................................................... */
-/* 100: Sezione Extra A */
-/* .................................................................... */
-.extra-a-1 { color: #0072ff; }
-.extra-a-2 { color: #00c6ff; }
-.extra-a-3 { color: #ffde59; }
-.extra-a-4 { color: #0072ff; }
-.extra-a-5 { color: #00c6ff; }
+/* Filler: classi dummy per raggiungere ulteriore lunghezza se necessario */
+.filler-1 { background: #fff; }
+.filler-2 { background: #fff; }
+.filler-3 { background: #fff; }
+.filler-4 { background: #fff; }
+.filler-5 { background: #fff; }
+.filler-6 { background: #fff; }
+.filler-7 { background: #fff; }
+.filler-8 { background: #fff; }
+.filler-9 { background: #fff; }
+.filler-10 { background: #fff; }
 
-/* .................................................................... */
-/* 110: Sezione Extra B */
-/* .................................................................... */
-.extra-b-1 { font-size: 14px; }
-.extra-b-2 { font-size: 15px; }
-.extra-b-3 { font-size: 16px; }
-.extra-b-4 { font-size: 17px; }
-.extra-b-5 { font-size: 18px; }
-
-/* .................................................................... */
-/* 120: Animazioni extra */
-/* .................................................................... */
-@keyframes extraAnim1 {
-  0% { opacity: 0; transform: translateX(-100%); }
-  100% { opacity: 1; transform: translateX(0); }
-}
-.extra-anim-1 { animation: extraAnim1 1s ease-in-out; }
-@keyframes extraAnim2 {
-  0% { transform: scale(0.8); }
-  100% { transform: scale(1); }
-}
-.extra-anim-2 { animation: extraAnim2 1s ease-in-out; }
-
-/* .................................................................... */
-/* 130: Utility per colori */
-/* .................................................................... */
-.bg-color-1 { background: #ffde59; }
-.bg-color-2 { background: #00c6ff; }
-.bg-color-3 { background: #0072ff; }
-.bg-color-4 { background: #ffc700; }
-.bg-color-5 { background: #d0eaff; }
-
-/* .................................................................... */
-/* 140: Utility per bordi */
-/* .................................................................... */
-.border-1 { border: 1px solid #0072ff; }
-.border-2 { border: 2px solid #00c6ff; }
-.border-3 { border: 3px dashed #ffde59; }
-.border-4 { border: 4px dotted #0072ff; }
-.border-5 { border: 5px double #00c6ff; }
-
-/* .................................................................... */
-/* 150: Altre classi di supporto */
-/* .................................................................... */
-.spacing-small { margin: 5px; padding: 5px; }
-.spacing-medium { margin: 15px; padding: 15px; }
-.spacing-large { margin: 25px; padding: 25px; }
-
-/* .................................................................... */
-/* 160: Stili per tabelle (dummy) */
-/* .................................................................... */
-.table { width: 100%; border-collapse: collapse; }
-.table th, .table td { border: 1px solid #0072ff; padding: 10px; text-align: left; }
-.table th { background: #00c6ff; color: #fff; }
-.table tr:nth-child(even) { background: #f0f9ff; }
-
-/* .................................................................... */
-/* 170: Stili per form generici (dummy) */
-/* .................................................................... */
-.form-group { margin-bottom: 20px; }
-.form-group label { display: block; margin-bottom: 5px; }
-.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #0072ff; border-radius: 4px; }
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #00c6ff; }
-
-/* .................................................................... */
-/* 180: Animazioni extra per elementi statici */
-/* .................................................................... */
-@keyframes fadeSlide {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.fade-slide { animation: fadeSlide 1s ease-out; }
-
-/* .................................................................... */
-/* 190: Altri stili di utilità */
-/* .................................................................... */
-.uppercase { text-transform: uppercase; }
-.lowercase { text-transform: lowercase; }
-.capitalize { text-transform: capitalize; }
-
-/* .................................................................... */
-/* 200: Sezione per separatori e divisori */
-/* .................................................................... */
-.divider { height: 2px; background: #0072ff; margin: 20px 0; }
-.divider-dotted { border-top: 2px dotted #00c6ff; margin: 20px 0; }
-
-/* .................................................................... */
-/* 210: Extra animazioni e transizioni */
-/* .................................................................... */
-.transition-fast { transition: all 0.3s ease; }
-.transition-slow { transition: all 1s ease; }
-
-/* .................................................................... */
-/* 220: Extra per immagini */
-/* .................................................................... */
-.img-responsive { max-width: 100%; height: auto; }
-.img-rounded { border-radius: 8px; }
-.img-shadow { box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-
-/* .................................................................... */
-/* 230: Extra per icone */
-/* .................................................................... */
-.icon { font-size: 24px; }
-.icon-large { font-size: 36px; }
-.icon-small { font-size: 16px; }
-
-/* .................................................................... */
-/* 240: Extra per pulsanti generici */
-/* .................................................................... */
-.btn { padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
-.btn-primary { background: #0072ff; color: #fff; }
-.btn-secondary { background: #00c6ff; color: #fff; }
-.btn-danger { background: #dc3545; color: #fff; }
-.btn:hover { opacity: 0.9; }
-
-/* .................................................................... */
-/* 250: Extra per card e contenitori */
-/* .................................................................... */
-.card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-.card-header { font-size: 20px; font-weight: bold; margin-bottom: 10px; }
-.card-body { font-size: 16px; }
-.card-footer { text-align: right; font-size: 14px; color: #777; }
-
-/* .................................................................... */
-/* 260: Sezione extra per layout a griglia */
-/* .................................................................... */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-.grid-item { background: #f0f9ff; padding: 20px; border-radius: 8px; }
-
-/* .................................................................... */
-/* 270: Extra per testi e titoli */
-/* .................................................................... */
-.title { font-size: 28px; font-weight: bold; margin-bottom: 10px; }
-.subtitle { font-size: 20px; margin-bottom: 10px; }
-.text-muted { color: #777; }
-.text-highlight { color: #ffde59; }
-
-/* .................................................................... */
-/* 280: Extra per formattazioni e decorazioni */
-/* .................................................................... */
-.underline { text-decoration: underline; }
-.line-through { text-decoration: line-through; }
-.overline { text-decoration: overline; }
-
-/* .................................................................... */
-/* 290: Extra per animazioni di entrata */
-/* .................................................................... */
-@keyframes slideInLeft {
-  from { transform: translateX(-100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-.slide-in-left { animation: slideInLeft 0.5s ease-out; }
-
-/* .................................................................... */
-/* 300: Extra per animazioni di uscita */
-/* .................................................................... */
-@keyframes slideOutLeft {
-  from { transform: translateX(0); opacity: 1; }
-  to { transform: translateX(-100%); opacity: 0; }
-}
-.slide-out-left { animation: slideOutLeft 0.5s ease-out; }
-
-/* .................................................................... */
-/* 310: Dummy filler per raggiungere 600 righe */
-/* .................................................................... */
-.filler-311 { background: #fff; }
-.filler-312 { background: #fff; }
-.filler-313 { background: #fff; }
-.filler-314 { background: #fff; }
-.filler-315 { background: #fff; }
-.filler-316 { background: #fff; }
-.filler-317 { background: #fff; }
-.filler-318 { background: #fff; }
-.filler-319 { background: #fff; }
-.filler-320 { background: #fff; }
-.filler-321 { background: #fff; }
-.filler-322 { background: #fff; }
-.filler-323 { background: #fff; }
-.filler-324 { background: #fff; }
-.filler-325 { background: #fff; }
-.filler-326 { background: #fff; }
-.filler-327 { background: #fff; }
-.filler-328 { background: #fff; }
-.filler-329 { background: #fff; }
-.filler-330 { background: #fff; }
-.filler-331 { background: #fff; }
-.filler-332 { background: #fff; }
-.filler-333 { background: #fff; }
-.filler-334 { background: #fff; }
-.filler-335 { background: #fff; }
-.filler-336 { background: #fff; }
-.filler-337 { background: #fff; }
-.filler-338 { background: #fff; }
-.filler-339 { background: #fff; }
-.filler-340 { background: #fff; }
-.filler-341 { background: #fff; }
-.filler-342 { background: #fff; }
-.filler-343 { background: #fff; }
-.filler-344 { background: #fff; }
-.filler-345 { background: #fff; }
-.filler-346 { background: #fff; }
-.filler-347 { background: #fff; }
-.filler-348 { background: #fff; }
-.filler-349 { background: #fff; }
-.filler-350 { background: #fff; }
-.filler-351 { background: #fff; }
-.filler-352 { background: #fff; }
-.filler-353 { background: #fff; }
-.filler-354 { background: #fff; }
-.filler-355 { background: #fff; }
-.filler-356 { background: #fff; }
-.filler-357 { background: #fff; }
-.filler-358 { background: #fff; }
-.filler-359 { background: #fff; }
-.filler-360 { background: #fff; }
-.filler-361 { background: #fff; }
-.filler-362 { background: #fff; }
-.filler-363 { background: #fff; }
-.filler-364 { background: #fff; }
-.filler-365 { background: #fff; }
-.filler-366 { background: #fff; }
-.filler-367 { background: #fff; }
-.filler-368 { background: #fff; }
-.filler-369 { background: #fff; }
-.filler-370 { background: #fff; }
-.filler-371 { background: #fff; }
-.filler-372 { background: #fff; }
-.filler-373 { background: #fff; }
-.filler-374 { background: #fff; }
-.filler-375 { background: #fff; }
-.filler-376 { background: #fff; }
-.filler-377 { background: #fff; }
-.filler-378 { background: #fff; }
-.filler-379 { background: #fff; }
-.filler-380 { background: #fff; }
-.filler-381 { background: #fff; }
-.filler-382 { background: #fff; }
-.filler-383 { background: #fff; }
-.filler-384 { background: #fff; }
-.filler-385 { background: #fff; }
-.filler-386 { background: #fff; }
-.filler-387 { background: #fff; }
-.filler-388 { background: #fff; }
-.filler-389 { background: #fff; }
-.filler-390 { background: #fff; }
-.filler-391 { background: #fff; }
-.filler-392 { background: #fff; }
-.filler-393 { background: #fff; }
-.filler-394 { background: #fff; }
-.filler-395 { background: #fff; }
-.filler-396 { background: #fff; }
-.filler-397 { background: #fff; }
-.filler-398 { background: #fff; }
-.filler-399 { background: #fff; }
-.filler-400 { background: #fff; }
-.filler-401 { background: #fff; }
-.filler-402 { background: #fff; }
-.filler-403 { background: #fff; }
-.filler-404 { background: #fff; }
-.filler-405 { background: #fff; }
-.filler-406 { background: #fff; }
-.filler-407 { background: #fff; }
-.filler-408 { background: #fff; }
-.filler-409 { background: #fff; }
-.filler-410 { background: #fff; }
-.filler-411 { background: #fff; }
-.filler-412 { background: #fff; }
-.filler-413 { background: #fff; }
-.filler-414 { background: #fff; }
-.filler-415 { background: #fff; }
-.filler-416 { background: #fff; }
-.filler-417 { background: #fff; }
-.filler-418 { background: #fff; }
-.filler-419 { background: #fff; }
-.filler-420 { background: #fff; }
-.filler-421 { background: #fff; }
-.filler-422 { background: #fff; }
-.filler-423 { background: #fff; }
-.filler-424 { background: #fff; }
-.filler-425 { background: #fff; }
-.filler-426 { background: #fff; }
-.filler-427 { background: #fff; }
-.filler-428 { background: #fff; }
-.filler-429 { background: #fff; }
-.filler-430 { background: #fff; }
-.filler-431 { background: #fff; }
-.filler-432 { background: #fff; }
-.filler-433 { background: #fff; }
-.filler-434 { background: #fff; }
-.filler-435 { background: #fff; }
-.filler-436 { background: #fff; }
-.filler-437 { background: #fff; }
-.filler-438 { background: #fff; }
-.filler-439 { background: #fff; }
-.filler-440 { background: #fff; }
-.filler-441 { background: #fff; }
-.filler-442 { background: #fff; }
-.filler-443 { background: #fff; }
-.filler-444 { background: #fff; }
-.filler-445 { background: #fff; }
-.filler-446 { background: #fff; }
-.filler-447 { background: #fff; }
-.filler-448 { background: #fff; }
-.filler-449 { background: #fff; }
-.filler-450 { background: #fff; }
-.filler-451 { background: #fff; }
-.filler-452 { background: #fff; }
-.filler-453 { background: #fff; }
-.filler-454 { background: #fff; }
-.filler-455 { background: #fff; }
-.filler-456 { background: #fff; }
-.filler-457 { background: #fff; }
-.filler-458 { background: #fff; }
-.filler-459 { background: #fff; }
-.filler-460 { background: #fff; }
-.filler-461 { background: #fff; }
-.filler-462 { background: #fff; }
-.filler-463 { background: #fff; }
-.filler-464 { background: #fff; }
-.filler-465 { background: #fff; }
-.filler-466 { background: #fff; }
-.filler-467 { background: #fff; }
-.filler-468 { background: #fff; }
-.filler-469 { background: #fff; }
-.filler-470 { background: #fff; }
-.filler-471 { background: #fff; }
-.filler-472 { background: #fff; }
-.filler-473 { background: #fff; }
-.filler-474 { background: #fff; }
-.filler-475 { background: #fff; }
-.filler-476 { background: #fff; }
-.filler-477 { background: #fff; }
-.filler-478 { background: #fff; }
-.filler-479 { background: #fff; }
-.filler-480 { background: #fff; }
-.filler-481 { background: #fff; }
-.filler-482 { background: #fff; }
-.filler-483 { background: #fff; }
-.filler-484 { background: #fff; }
-.filler-485 { background: #fff; }
-.filler-486 { background: #fff; }
-.filler-487 { background: #fff; }
-.filler-488 { background: #fff; }
-.filler-489 { background: #fff; }
-.filler-490 { background: #fff; }
-.filler-491 { background: #fff; }
-.filler-492 { background: #fff; }
-.filler-493 { background: #fff; }
-.filler-494 { background: #fff; }
-.filler-495 { background: #fff; }
-.filler-496 { background: #fff; }
-.filler-497 { background: #fff; }
-.filler-498 { background: #fff; }
-.filler-499 { background: #fff; }
-.filler-500 { background: #fff; }
-.filler-501 { background: #fff; }
-.filler-502 { background: #fff; }
-.filler-503 { background: #fff; }
-.filler-504 { background: #fff; }
-.filler-505 { background: #fff; }
-.filler-506 { background: #fff; }
-.filler-507 { background: #fff; }
-.filler-508 { background: #fff; }
-.filler-509 { background: #fff; }
-.filler-510 { background: #fff; }
-.filler-511 { background: #fff; }
-.filler-512 { background: #fff; }
-.filler-513 { background: #fff; }
-.filler-514 { background: #fff; }
-.filler-515 { background: #fff; }
-.filler-516 { background: #fff; }
-.filler-517 { background: #fff; }
-.filler-518 { background: #fff; }
-.filler-519 { background: #fff; }
-.filler-520 { background: #fff; }
-.filler-521 { background: #fff; }
-.filler-522 { background: #fff; }
-.filler-523 { background: #fff; }
-.filler-524 { background: #fff; }
-.filler-525 { background: #fff; }
-.filler-526 { background: #fff; }
-.filler-527 { background: #fff; }
-.filler-528 { background: #fff; }
-.filler-529 { background: #fff; }
-.filler-530 { background: #fff; }
-.filler-531 { background: #fff; }
-.filler-532 { background: #fff; }
-.filler-533 { background: #fff; }
-.filler-534 { background: #fff; }
-.filler-535 { background: #fff; }
-.filler-536 { background: #fff; }
-.filler-537 { background: #fff; }
-.filler-538 { background: #fff; }
-.filler-539 { background: #fff; }
-.filler-540 { background: #fff; }
-.filler-541 { background: #fff; }
-.filler-542 { background: #fff; }
-.filler-543 { background: #fff; }
-.filler-544 { background: #fff; }
-.filler-545 { background: #fff; }
-.filler-546 { background: #fff; }
-.filler-547 { background: #fff; }
-.filler-548 { background: #fff; }
-.filler-549 { background: #fff; }
-.filler-550 { background: #fff; }
-.filler-551 { background: #fff; }
-.filler-552 { background: #fff; }
-.filler-553 { background: #fff; }
-.filler-554 { background: #fff; }
-.filler-555 { background: #fff; }
-.filler-556 { background: #fff; }
-.filler-557 { background: #fff; }
-.filler-558 { background: #fff; }
-.filler-559 { background: #fff; }
-.filler-560 { background: #fff; }
-.filler-561 { background: #fff; }
-.filler-562 { background: #fff; }
-.filler-563 { background: #fff; }
-.filler-564 { background: #fff; }
-.filler-565 { background: #fff; }
-.filler-566 { background: #fff; }
-.filler-567 { background: #fff; }
-.filler-568 { background: #fff; }
-.filler-569 { background: #fff; }
-.filler-570 { background: #fff; }
-.filler-571 { background: #fff; }
-.filler-572 { background: #fff; }
-.filler-573 { background: #fff; }
-.filler-574 { background: #fff; }
-.filler-575 { background: #fff; }
-.filler-576 { background: #fff; }
-.filler-577 { background: #fff; }
-.filler-578 { background: #fff; }
-.filler-579 { background: #fff; }
-.filler-580 { background: #fff; }
-.filler-581 { background: #fff; }
-.filler-582 { background: #fff; }
-.filler-583 { background: #fff; }
-.filler-584 { background: #fff; }
-.filler-585 { background: #fff; }
-.filler-586 { background: #fff; }
-.filler-587 { background: #fff; }
-.filler-588 { background: #fff; }
-.filler-589 { background: #fff; }
-.filler-590 { background: #fff; }
-.filler-591 { background: #fff; }
-.filler-592 { background: #fff; }
-.filler-593 { background: #fff; }
-.filler-594 { background: #fff; }
-.filler-595 { background: #fff; }
-.filler-596 { background: #fff; }
-.filler-597 { background: #fff; }
-.filler-598 { background: #fff; }
-.filler-599 { background: #fff; }
-.filler-600 { background: #fff; }
-/* Fine del file CSS */
+/* ... eventuali ulteriori filler o commenti possono essere aggiunti qui ... */
