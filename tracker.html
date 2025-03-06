@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flight Tracker - Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="airplane.png" alt="Logo Flight Tracker">
+      </a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tracker.html">Tracker</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="tracker-section">
+      <h1>Flight Tracker</h1>
+      <form id="flightForm">
+        <input type="text" id="flightInput" placeholder="Inserisci il codice IATA (es. TK900)" required>
+        <!-- Il testo "Cerca" è racchiuso in uno span per animarlo -->
+        <button type="submit" id="submitButton"><span>Cerca</span></button>
+      </form>
+      <!-- Istruzioni per l'uso -->
+      <p class="instructions">
+        Inserisci il codice IATA del volo (ad es. TK900 o AZ123) per visualizzare le informazioni dettagliate del volo.
+      </p>
+      <div id="output"></div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2025 Flight Tracker. Tutti i diritti riservati.</p>
+  </footer>
+  <script src="tracker.js"></script>
+</body>
+</html>
